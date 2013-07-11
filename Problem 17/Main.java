@@ -27,23 +27,19 @@ public class Main {
 					word = word + " and " + special[Integer.parseInt((x+"").substring(2,3))];
 				else
 					word = word + " and " + tens[Integer.parseInt((x+"").substring(1,2))];
-				if (Integer.parseInt((x+"").substring(2,3)) != 0 && !(Integer.parseInt((x+"").substring(1,3)) > 10 && Integer.parseInt((x+"").substring(1,3)) < 20)) {
+				if (Integer.parseInt((x+"").substring(2,3)) != 0 && !(Integer.parseInt((x+"").substring(1,3)) > 10 && Integer.parseInt((x+"").substring(1,3)) < 20))
 					word = word + " " + ones[Integer.parseInt((x+"").substring(2,3))];
-				}
 			}
-			else if (Integer.parseInt((x+"").substring(2,3)) != 0) {
+			else if (Integer.parseInt((x+"").substring(2,3)) != 0)
 				word = word + " and " + ones[Integer.parseInt((x+"").substring(2,3))];
-			}
 		}
 		else if (x > 10 && x < 100) {
 			word = tens[Integer.parseInt((x+"").substring(0,1))];
-			if (Integer.parseInt((x+"").substring(1,2)) != 0) {
+			if (Integer.parseInt((x+"").substring(1,2)) != 0)
 				word = word + " " + ones[Integer.parseInt((x+"").substring(1,2))];
-			}
 		}
-		else if (x < 10) {
+		else if (x < 10)
 			word = ones[Integer.parseInt((x+"").substring(0,1))];
-		}
 		return word;
 	}
 }
