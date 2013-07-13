@@ -6,9 +6,11 @@ import java.util.*;
 
 public class Main {
 	public static void main(String[] args) {
-		ArrayList<String> permutations = new ArrayList<String>();
+		System.out.println(findPermutationAt(1000000));
+	}
+
+	public static String findPermutationAt(int end) {
 		int counter = 1;
-		String temp = "";
 		for (int a = 0; a < 10; a++) {
 			for (int b = 0; b < 10; b++) {
 				if (a == b) {}
@@ -37,10 +39,8 @@ public class Main {
 																			for (int j = 0; j < 10; j++) {
 																				if ((""+a+b+c+d+e+f+g+h+i).contains(j+"")) {}
 																				else {
-																					//temp = ""+a+b+c+d+e+f+g+h+i+j;
-																					//permutations.add(temp);
 																					counter++;
-																					if (counter == 1000001) System.out.println(""+a+b+c+d+e+f+g+h+i+j);
+																					if (counter == end+1) return (""+a+b+c+d+e+f+g+h+i+j);
 																				}
 																			}
 																		}
@@ -60,9 +60,6 @@ public class Main {
 				}
 			}
 		}
-		//ArrayList<Integer> permutationInts = new ArrayList<Integer>();
-		//for (String x : permutations) permutationInts.add(Integer.parseInt(x));
-		//Collections.sort(permutations);
-		//System.out.println(permutations.get(1000000));
+	return "";
 	}
 }
