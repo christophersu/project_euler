@@ -3,7 +3,7 @@ Here are my solutions to problems from [Project Euler](http://projectueler.net).
 
 ### Todo list:
 #### Attempted but not yet complete
-* Problem 10
+N/A
 
 #### Completed but code not executed
 * Problem 12
