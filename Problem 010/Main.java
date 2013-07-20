@@ -2,26 +2,18 @@ import java.util.*;
 
 public class Main {
 	public static void main(String[] args) {
-		ArrayList<Integer> primes = new ArrayList<Integer>();
-		int x = 3;
-		int y;
-		boolean isPrime;
-		primes.add(2);
-		while (x <= 2000000) {
-			y = 0;
-			isPrime = true;
-			while (primes.get(y)*primes.get(y) <= x) {
-				if (x % primes.get(y) == 0) {
-					isPrime = false;
-					break;
-				}
-				y++;
-			}
-			if (isPrime) primes.add(x);
-			x += 2;
-		}
-		int sum = 0;
-		for (int z : primes) sum += z;
-		System.out.println(sum);
+		int end = 2000000;
+		boolean[] primeSieve = new boolean[end + 1];
+		for (int i = 2; i <= end; i++)
+			primeSieve[i] = true;
+		for (long i = 2; i*i <= end; i++) {
+            if (primeSieve[(int)i])
+                for (long j = i; i*j <= end; j++)
+                    primeSieve[(int)(i*j)] = false;
+        }
+        long sum = 0;
+        for (int i = 0; i < end; i++)
+        	if(primeSieve[i]) sum += i;
+        System.out.println(sum);
 	}
 }

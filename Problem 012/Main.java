@@ -2,12 +2,14 @@ import java.util.*;
 
 public class Main {
 	public static void main(String[] args) {
-		int triangleCounter = 7;
+		//int triangleCounter = 7;
 		int triangleNumber = 28;
 		while (numberOfDivisors(triangleNumber) < 501) {
-			triangleCounter++;
-			triangleNumber = triangleNumber + triangleCounter;
+			//triangleCounter++;
+			//triangleNumber = triangleNumber + triangleCounter;
+			triangleNumber++;
 		}
+		System.out.println(triangleNumber);
 	}
 	
 	public static int numberOfDivisors(int x) {
