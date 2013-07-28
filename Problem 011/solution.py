@@ -2,17 +2,13 @@ grid = (8, 2, 22, 97, 38, 15, 0, 40, 0, 75, 4, 5, 7, 78, 52, 12, 50, 77, 91, 8),
 
 greatestProduct = 0;
 
-# check up and down
-for row in range(16): # go down the rows of the list
-	for column in range(19):
-		if (grid[row][column]*grid[row+1][column]*grid[row+2][column]*grid[row+3][column]) > greatestProduct:
-			greatestProduct = grid[row][column]*grid[row+1][column]*grid[row+2][column]*grid[row+3][column]
-
-# check left and right
-for row in range(19): # go down the rows of the list
-	for column in range(16):
-		if (grid[row][column]*grid[row][column+1]*grid[row][column+2]*grid[row][column+3]) > greatestProduct:
-			greatestProduct = grid[row][column]*grid[row][column+1]*grid[row][column+2]*grid[row][column+3]
+# check up and down and left and right
+for x in range(16):
+	for y in range(19):
+		if (grid[x][y]*grid[x+1][y]*grid[x+2][y]*grid[x+3][y]) > greatestProduct:
+			greatestProduct = grid[x][y]*grid[x+1][y]*grid[x+2][y]*grid[x+3][y]
+		if (grid[y][x]*grid[y][x+1]*grid[y][x+2]*grid[y][x+3]) > greatestProduct:
+			greatestProduct = grid[y][x]*grid[y][x+1]*grid[y][x+2]*grid[y][x+3]
 
 # check \ diagonals
 for row in range(16): # go down the rows of the list
