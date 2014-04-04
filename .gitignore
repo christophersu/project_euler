@@ -18,3 +18,8 @@ xcuserdata
 # svn & cvs
 .svn
 CVS
+
+# cloud
+*sage*
+*.20*.ipy*
+*/.ipy*
