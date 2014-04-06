@@ -19,9 +19,12 @@ xcuserdata
 .svn
 CVS
 
+<<<<<<< HEAD
+Problems/*
+*.class
+=======
 # cloud
 *sage*
 *.20*.ipy*
 */.ipy*
-Problems/*
-*.class
+>>>>>>> 9b42e31bef373b1b5e10ea38f4c05fcbb22d6042
